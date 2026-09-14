@@ -1,0 +1,10 @@
+.container {
+  width: var(--container-width);
+  margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: var(--container-width-mobile);
+  }
+}

@@ -1,0 +1,23 @@
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--small-ui);
+  font-weight: 600;
+}
+
+.langBtn {
+  min-height: 44px;
+  min-width: 36px;
+  color: var(--color-gray);
+  transition: color var(--transition-base);
+}
+
+.langBtn:hover,
+.langBtn.active {
+  color: var(--color-white);
+}
+
+.divider {
+  color: var(--color-gray-dark);
+}

@@ -1,0 +1,41 @@
+:root {
+  --color-black: #1a1817;
+  --color-black-soft: #242120;
+
+  --color-red: #c81e25;
+  --color-red-dark: #85161c;
+  --color-red-deep: #681015;
+
+  --color-cream: #fdfbed;
+  --color-cream-soft: #f1efe1;
+
+  --color-white: #f8f7f2;
+
+  --color-gray: #b7b1a8;
+  --color-gray-dark: #716d68;
+
+  --border-light: rgba(255, 255, 255, 0.1);
+
+  --font-en: 'Poppins', system-ui, sans-serif;
+  --font-ar: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', system-ui, sans-serif;
+
+  --container-width: min(1280px, calc(100% - 48px));
+  --container-width-mobile: calc(100% - 40px);
+
+  --header-height: 88px;
+  --header-height-scrolled: 72px;
+
+  --radius-sm: 2px;
+  --transition-base: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --hero-title: clamp(3rem, 7vw, 7rem);
+  --section-title: clamp(1.65rem, 3vw, 2.75rem);
+  --secondary-title: clamp(1.15rem, 1.85vw, 1.65rem);
+  --title-line-height: 1.38;
+  --title-wrap-padding-block-end: 0.28em;
+  --body-size: clamp(0.875rem, 0.95vw, 1rem);
+  --small-ui: clamp(0.72rem, 0.8vw, 0.85rem);
+
+  --bp-tablet: 768px;
+  --bp-desktop: 1200px;
+}

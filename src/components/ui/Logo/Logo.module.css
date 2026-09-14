@@ -1,0 +1,22 @@
+.logo {
+  width: auto;
+  height: 64px;
+  object-fit: contain;
+  transition: height var(--transition-base), transform var(--transition-base);
+}
+
+.small {
+  height: 52px;
+}
+
+.hero {
+  width: min(640px, 52vw);
+  height: auto;
+  max-height: none;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    width: min(320px, 82vw);
+  }
+}
