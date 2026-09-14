@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import aboutImage from '@images/about-engineer.png';
+import aboutImage from '@images/about-engineer.webp';
 import { useGSAP } from '@/lib/gsap';
 import { revealImage, subtleParallax, setVisibleState } from '@/lib/motion';
 import { useLanguage } from '@/contexts/LanguageContext';

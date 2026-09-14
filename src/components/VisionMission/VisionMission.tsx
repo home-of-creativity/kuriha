@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import visionImage from '@images/vision-koreiha.png';
-import missionImage from '@images/mission-koreiha.png';
+import visionImage from '@images/vision-koreiha.webp';
+import missionImage from '@images/mission-koreiha.webp';
 import { useGSAP, gsap, ScrollTrigger } from '@/lib/gsap';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReducedMotion } from '@/hooks/useReducedMotion';

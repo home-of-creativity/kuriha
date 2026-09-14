@@ -1,4 +1,4 @@
-import contactImage from '@images/contact-phone.png';
+import contactImage from '@images/contact-phone.webp';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Container } from '@/components/ui/Container/Container';
 import { ContactForm } from '@/components/ContactCTA/ContactForm';

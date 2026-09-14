@@ -1,4 +1,4 @@
-import chamBankLogo from '@clients/cham-bank.png';
+import chamBankLogo from '@clients/cham-bank.webp';
 import syrianPetroleumLogo from '@clients/syrian-petroleum.svg';
 import arabBankLogo from '@clients/arab-bank.svg';
 import syriatelLogo from '@clients/syriatel.svg';
@@ -6,9 +6,9 @@ import faoLogo from '@clients/fao.svg';
 import whoLogo from '@clients/who.svg';
 import unicefLogo from '@clients/unicef.svg';
 import unhcrLogo from '@clients/unhcr.svg';
-import syriaInternationalLogo from '@clients/syria-international.png';
+import syriaInternationalLogo from '@clients/syria-international.webp';
 import ministryCultureLogo from '@clients/ministry-culture.svg';
-import bankSyriaLogo from '@clients/bank-syria.jpg';
+import bankSyriaLogo from '@clients/bank-syria.webp';
 
 export interface ClientItem {
   id: string;

@@ -1,7 +1,7 @@
-import detectionImage from '@images/detection-system.png';
-import cleanAgentImage from '@images/clean-agent.png';
-import waterFoamImage from '@images/water-foam.png';
-import missionCriticalImage from '@images/mission-critical.png';
+import detectionImage from '@images/detection-system.webp';
+import cleanAgentImage from '@images/clean-agent.webp';
+import waterFoamImage from '@images/water-foam.webp';
+import missionCriticalImage from '@images/mission-critical.webp';
 
 export interface SystemItem {
   id: string;

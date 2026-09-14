@@ -1,4 +1,4 @@
-import servicesImage from '@images/services-piping.png';
+import servicesImage from '@images/services-piping.webp';
 import { services } from '@/data/services';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Container } from '@/components/ui/Container/Container';

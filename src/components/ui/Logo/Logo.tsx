@@ -1,4 +1,4 @@
-import logo from '@brand/kuriha-logo.png';
+import logo from '@brand/kuriha-logo.webp';
 import { useLanguage } from '@/contexts/LanguageContext';
 import styles from './Logo.module.css';
 

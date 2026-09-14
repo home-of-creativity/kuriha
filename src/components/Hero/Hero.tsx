@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import heroImage from '@images/hero-pump-room.png';
+import heroImage from '@images/hero-pump-room.webp';
 import { useGSAP, gsap } from '@/lib/gsap';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
