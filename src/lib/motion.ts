@@ -3,6 +3,10 @@ import { gsap, ScrollTrigger } from '@/lib/gsap';
 type MotionTarget = gsap.TweenTarget;
 type MotionTrigger = Element | string | null | undefined;
 
+export function isCompactViewport(): boolean {
+  return window.matchMedia('(max-width: 767px)').matches;
+}
+
 interface RevealOptions {
   trigger?: MotionTrigger;
   start?: string;
@@ -39,6 +43,7 @@ export function revealText(
   options: RevealOptions = {},
 ): ScrollTrigger | undefined {
   const { trigger, start = 'top 82%', once = true } = options;
+  const compact = isCompactViewport();
 
   gsap.set(lines, { opacity: 0, yPercent: 100 });
 
@@ -50,8 +55,8 @@ export function revealText(
       gsap.to(lines, {
         opacity: 1,
         yPercent: 0,
-        duration: 0.9,
-        stagger: 0.08,
+        duration: compact ? 0.7 : 0.9,
+        stagger: compact ? 0.06 : 0.08,
         ease: 'power3.out',
       });
     },
@@ -64,27 +69,42 @@ export function revealImage(
   options: RevealOptions = {},
 ): ScrollTrigger | undefined {
   const { trigger, start = 'top 82%', once = true } = options;
+  const compact = isCompactViewport();
 
   gsap.set(wrapper, { clipPath: 'inset(0 0 100% 0)' });
-  gsap.set(image, { scale: 1.08 });
+  gsap.set(image, { scale: compact ? 1.04 : 1.08 });
 
-  return ScrollTrigger.create({
+  let played = false;
+  const play = () => {
+    if (played) return;
+    played = true;
+    gsap.to(wrapper, {
+      clipPath: 'inset(0 0 0% 0)',
+      duration: compact ? 0.9 : 1.1,
+      ease: 'power3.inOut',
+    });
+    gsap.to(image, {
+      scale: 1,
+      duration: compact ? 0.9 : 1.1,
+      ease: 'power3.inOut',
+    });
+  };
+
+  const scrollTrigger = ScrollTrigger.create({
     trigger: (trigger ?? wrapper) as Element | string,
     start,
     once,
-    onEnter: () => {
-      gsap.to(wrapper, {
-        clipPath: 'inset(0 0 0% 0)',
-        duration: 1.1,
-        ease: 'power3.inOut',
-      });
-      gsap.to(image, {
-        scale: 1,
-        duration: 1.1,
-        ease: 'power3.inOut',
-      });
-    },
+    onEnter: play,
   });
+
+  queueMicrotask(() => {
+    ScrollTrigger.refresh();
+    if (scrollTrigger.isActive || scrollTrigger.progress > 0) {
+      play();
+    }
+  });
+
+  return scrollTrigger;
 }
 
 export function lineReveal(
@@ -166,13 +186,15 @@ export function subtleParallax(
 ): ScrollTrigger | undefined {
   if (reducedMotion || !trigger) return undefined;
 
+  const compact = isCompactViewport();
+
   return ScrollTrigger.create({
     trigger: trigger as Element | string,
     start: 'top bottom',
     end: 'bottom top',
-    scrub: true,
+    scrub: compact ? 0.6 : true,
     animation: gsap.to(target, {
-      yPercent: -6,
+      yPercent: compact ? -3 : -6,
       ease: 'none',
     }),
   });
@@ -185,6 +207,6 @@ export function setVisibleState(targets: MotionTarget): void {
     yPercent: 0,
     scale: 1,
     scaleX: 1,
-    clipPath: 'inset(0 0 0% 0)',
+    clipPath: 'none',
   });
 }

@@ -56,3 +56,14 @@
     align-items: start;
   }
 }
+
+@media (max-width: 767px) {
+  .footer {
+    padding-block: 2.75rem 1.75rem;
+  }
+
+  .top {
+    gap: 2rem;
+    margin-block-end: 2rem;
+  }
+}

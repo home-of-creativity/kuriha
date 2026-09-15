@@ -15,6 +15,12 @@ html[lang='ar'] body {
   font-family: var(--font-ar);
 }
 
+html[lang='ar'] *,
+html[lang='ar'] *::before,
+html[lang='ar'] *::after {
+  letter-spacing: 0 !important;
+}
+
 html[lang='en'] h1,
 html[lang='en'] h2,
 html[lang='en'] h3,

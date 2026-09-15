@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useGSAP, gsap } from '@/lib/gsap';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Container } from '@/components/ui/Container/Container';
 import { Logo } from '@/components/ui/Logo/Logo';
@@ -18,9 +17,6 @@ const navItems = [
 
 export function Header() {
   const { t } = useLanguage();
-  const headerRef = useRef<HTMLElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,39 +34,18 @@ export function Header() {
     };
   }, [menuOpen]);
 
-  useGSAP(
-    () => {
-      if (!headerRef.current || !innerRef.current || !logoRef.current) return;
-
-      gsap.to(innerRef.current, {
-        height: scrolled ? 72 : 88,
-        duration: 0.5,
-        ease: 'power2.out',
-      });
-
-      gsap.to(logoRef.current, {
-        scale: scrolled ? 0.88 : 1,
-        duration: 0.5,
-        ease: 'power2.out',
-      });
-    },
-    { dependencies: [scrolled] },
-  );
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
+    <>
     <header
-      ref={headerRef}
       className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
       data-hero-nav
     >
       <Container as="nav" className={styles.nav} aria-label="Main">
-        <div ref={innerRef} className={styles.inner}>
+        <div className={styles.inner}>
           <a href="#" className={styles.logoLink} aria-label="KOREIHA GROUP home">
-            <div ref={logoRef}>
-              <Logo variant={scrolled ? 'small' : 'default'} />
-            </div>
+            <Logo variant={scrolled ? 'small' : 'default'} />
           </a>
 
           <ul className={styles.desktopNav}>
@@ -100,6 +75,7 @@ export function Header() {
           </div>
         </div>
       </Container>
+    </header>
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
         <Container className={styles.mobileMenuInner}>
@@ -120,6 +96,6 @@ export function Header() {
           </div>
         </Container>
       </div>
-    </header>
+    </>
   );
 }

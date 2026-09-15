@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { systems } from '@/data/systems';
 import { useGSAP, gsap, ScrollTrigger } from '@/lib/gsap';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { Container } from '@/components/ui/Container/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading/SectionHeading';
@@ -12,68 +13,51 @@ export function Systems() {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const reducedMotion = useReducedMotion();
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   useGSAP(
     () => {
-      if (!sectionRef.current) return;
+      if (!isDesktop || !sectionRef.current) return;
 
-      const mm = gsap.matchMedia();
-
-      mm.add('(min-width: 1200px)', () => {
-        const panels = gsap.utils.toArray<HTMLElement>('[data-system-panel]');
-        const images = gsap.utils.toArray<HTMLElement>('[data-system-image]');
-
-        panels.forEach((panel, index) => {
-          ScrollTrigger.create({
-            trigger: panel,
-            start: 'top 55%',
-            end: 'bottom 45%',
-            onEnter: () => setActiveIndex(index),
-            onEnterBack: () => setActiveIndex(index),
-          });
-        });
-
-        images.forEach((img, index) => {
-          if (index === 0 || reducedMotion) {
-            gsap.set(img, { opacity: 1, scale: 1, clipPath: 'inset(0 0 0% 0)' });
-          } else {
-            gsap.set(img, { opacity: 0, scale: 1.03, clipPath: 'inset(0 0 100% 0)' });
-          }
-        });
-      });
-
-      return () => mm.revert();
-    },
-    { scope: sectionRef, dependencies: [reducedMotion, locale] },
-  );
-
-  useGSAP(
-    () => {
-      if (reducedMotion) return;
-
-      const images = sectionRef.current?.querySelectorAll('[data-system-image]');
-      if (!images) return;
+      const panels = gsap.utils.toArray<HTMLElement>('[data-system-panel]');
+      const images = gsap.utils.toArray<HTMLElement>('[data-system-image]');
 
       images.forEach((img, index) => {
-        if (index === activeIndex) {
-          gsap.to(img, {
-            opacity: 1,
-            scale: 1,
-            clipPath: 'inset(0 0 0% 0)',
-            duration: 0.8,
-            ease: 'power3.out',
-          });
-        } else {
-          gsap.to(img, {
-            opacity: 0,
-            scale: 1.03,
-            duration: 0.8,
-            ease: 'power3.out',
-          });
-        }
+        gsap.set(img, {
+          opacity: index === 0 ? 1 : 0,
+          scale: index === 0 ? 1 : 1.04,
+        });
       });
+
+      const showImage = (index: number) => {
+        setActiveIndex(index);
+        const duration = reducedMotion ? 0 : 0.7;
+        images.forEach((img, imageIndex) => {
+          const isActive = imageIndex === index;
+          gsap.to(img, {
+            opacity: isActive ? 1 : 0,
+            scale: isActive ? 1 : 1.04,
+            duration,
+            ease: 'power3.out',
+            overwrite: 'auto',
+          });
+        });
+      };
+
+      panels.forEach((panel, index) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: 'top 58%',
+          end: 'bottom 42%',
+          invalidateOnRefresh: true,
+          onEnter: () => showImage(index),
+          onEnterBack: () => showImage(index),
+        });
+      });
+
+      requestAnimationFrame(() => ScrollTrigger.refresh());
     },
-    { scope: sectionRef, dependencies: [activeIndex, reducedMotion] },
+    { scope: sectionRef, dependencies: [isDesktop, reducedMotion, locale] },
   );
 
   return (
@@ -87,7 +71,7 @@ export function Systems() {
         />
 
         <div className={styles.layout}>
-          <div className={styles.stickyMedia}>
+          <div data-sticky-media className={styles.stickyMedia}>
             <div className={styles.mediaStack}>
               {systems.map((system, index) => (
                 <img
@@ -111,13 +95,13 @@ export function Systems() {
                 data-system-panel
                 className={`${styles.panel} ${index === activeIndex ? styles.panelActive : ''}`}
               >
-                <div className={styles.mobileImage}>
+                <div className={styles.panelMedia}>
                   <img
                     src={system.image}
                     alt={locale === 'ar' ? system.imageAltAr : system.imageAltEn}
                     width={800}
-                    height={600}
-                    loading="lazy"
+                    height={500}
+                    loading={index === 0 ? 'eager' : 'lazy'}
                   />
                 </div>
                 <h3 className={styles.panelTitle}>

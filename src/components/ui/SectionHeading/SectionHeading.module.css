@@ -24,6 +24,16 @@
   padding-block-end: var(--title-wrap-padding-block-end);
 }
 
+@media (max-width: 767px) {
+  .heading {
+    margin-block-end: 1.1rem;
+  }
+
+  .title {
+    max-width: none;
+  }
+}
+
 .line {
   display: block;
   line-height: var(--title-line-height);

@@ -16,7 +16,16 @@
 }
 
 @media (max-width: 767px) {
+  .logo:not(.hero) {
+    height: 40px;
+  }
+
+  .small {
+    height: 36px;
+  }
+
   .hero {
-    width: min(320px, 82vw);
+    width: min(280px, 78vw);
+    height: auto;
   }
 }

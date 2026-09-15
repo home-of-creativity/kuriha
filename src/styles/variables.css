@@ -20,7 +20,7 @@
   --font-ar: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', system-ui, sans-serif;
 
   --container-width: min(1280px, calc(100% - 48px));
-  --container-width-mobile: calc(100% - 40px);
+  --container-width-mobile: calc(100% - 32px);
 
   --header-height: 88px;
   --header-height-scrolled: 72px;
@@ -38,4 +38,14 @@
 
   --bp-tablet: 768px;
   --bp-desktop: 1200px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 64px;
+    --header-height-scrolled: 60px;
+    --section-title: clamp(1.4rem, 6.4vw, 1.9rem);
+    --secondary-title: clamp(1.05rem, 4.6vw, 1.3rem);
+    --body-size: 0.9375rem;
+  }
 }
