@@ -18,6 +18,8 @@
 
 .nav {
   box-sizing: border-box;
+  width: min(1280px, calc(100% - clamp(2.5rem, 8vw, 6rem)));
+  padding-inline: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 .inner {
@@ -175,6 +177,11 @@
     background: rgba(26, 24, 23, 0.96);
     backdrop-filter: blur(16px);
     border-block-end: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav {
+    width: min(1280px, calc(100% - clamp(2.5rem, 8vw, 6rem)));
+    padding-inline: clamp(0.75rem, 2vw, 1.5rem);
   }
 
   .inner {
