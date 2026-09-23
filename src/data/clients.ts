@@ -1,69 +1,206 @@
 import chamBankLogo from '@clients/cham-bank.webp';
 import syrianPetroleumLogo from '@clients/syrian-petroleum.svg';
-import arabBankLogo from '@clients/arab-bank.svg';
 import syriatelLogo from '@clients/syriatel.svg';
 import faoLogo from '@clients/fao.svg';
 import whoLogo from '@clients/who.svg';
 import unicefLogo from '@clients/unicef.svg';
-import unhcrLogo from '@clients/unhcr.svg';
-import syriaInternationalLogo from '@clients/syria-international.webp';
 import ministryCultureLogo from '@clients/ministry-culture.svg';
-import bankSyriaLogo from '@clients/bank-syria.webp';
+
+export type ClientGroup = 'featured' | 'government' | 'private';
 
 export interface ClientItem {
   id: string;
   nameAr: string;
   nameEn: string;
   logo?: string;
+  group: ClientGroup;
 }
 
 export const clients: ClientItem[] = [
-  { id: 'cham-bank', nameAr: 'بنك الشام', nameEn: 'Cham Bank', logo: chamBankLogo },
   {
-    id: 'syrian-petroleum',
-    nameAr: 'شركة النفط السورية',
-    nameEn: 'Syrian Petroleum Company',
-    logo: syrianPetroleumLogo,
-  },
-  { id: 'mega-pharma', nameAr: 'ميغا فارما', nameEn: 'Mega Pharma' },
-  { id: 'arab-bank', nameAr: 'البنك العربي', nameEn: 'Arab Bank', logo: arabBankLogo },
-  { id: 'scs', nameAr: 'الجمعية السورية للحاسوب', nameEn: 'Syrian Computer Society' },
-  { id: 'cham-city', nameAr: 'شام سيتي سنتر', nameEn: 'Cham City Center' },
-  { id: 'syriatel', nameAr: 'سيرياتيل', nameEn: 'Syriatel', logo: syriatelLogo },
-  { id: 'alsham-school', nameAr: 'مدرسة الشام الخاصة', nameEn: 'Al Sham Private School' },
-  { id: 'fao', nameAr: 'منظمة الأغذية والزراعة', nameEn: 'FAO', logo: faoLogo },
-  { id: 'who', nameAr: 'منظمة الصحة العالمية', nameEn: 'WHO', logo: whoLogo },
-  {
-    id: 'children-hospital',
-    nameAr: 'مستشفى الأطفال - جامعة دمشق',
-    nameEn: "Damascus University Children's Hospital",
-  },
-  { id: 'unicef', nameAr: 'يونيسف', nameEn: 'UNICEF', logo: unicefLogo },
-  { id: 'cinema-city', nameAr: 'سينما سيتي', nameEn: 'Cinema City' },
-  { id: 'citizen-service', nameAr: 'مركز خدمة المواطن', nameEn: 'Citizen Service Center' },
-  {
-    id: 'syria-international',
-    nameAr: 'سوريا إنترناشيونال',
-    nameEn: 'Syria International',
-    logo: syriaInternationalLogo,
-  },
-  {
-    id: 'ministry-culture',
+    id: 'featured-ministry-culture',
     nameAr: 'وزارة الثقافة',
     nameEn: 'Ministry of Culture',
     logo: ministryCultureLogo,
-  },
-  { id: 'hasseb', nameAr: 'حسيب', nameEn: 'Hasseb' },
-  {
-    id: 'unhcr',
-    nameAr: 'المفوضية السامية للاجئين',
-    nameEn: 'UNHCR',
-    logo: unhcrLogo,
+    group: 'featured',
   },
   {
-    id: 'bank-syria',
-    nameAr: 'بنك سورية والمهجر',
-    nameEn: 'Bank of Syria and Overseas',
-    logo: bankSyriaLogo,
+    id: 'featured-badia-cement',
+    nameAr: 'اسمنت البادية',
+    nameEn: 'Al-Badia Cement',
+    group: 'featured',
+  },
+  {
+    id: 'featured-golden-gate',
+    nameAr: 'البوابة الذهبية – GOLDEN GATE',
+    nameEn: 'Golden Gate',
+    group: 'featured',
+  },
+  {
+    id: 'featured-land-sea-ports',
+    nameAr: 'الهيئة العامة للمنافذ البرية والبحرية',
+    nameEn: 'General Authority for Land and Sea Ports',
+    group: 'featured',
+  },
+  {
+    id: 'featured-golden-1',
+    nameAr: 'GOLDEN 1',
+    nameEn: 'GOLDEN 1',
+    group: 'featured',
+  },
+  {
+    id: 'featured-emergency',
+    nameAr: 'وزارة الطوارئ وإدارة الكوارث',
+    nameEn: 'Ministry of Emergency and Disaster Management',
+    group: 'featured',
+  },
+  {
+    id: 'gov-ports-customs',
+    nameAr: 'الهيئة العامة للمنافذ والجمارك',
+    nameEn: 'General Authority for Ports and Customs',
+    group: 'government',
+  },
+  {
+    id: 'gov-ports',
+    nameAr: 'المؤسسة العامة للموانئ',
+    nameEn: 'General Establishment of Ports',
+    group: 'government',
+  },
+  {
+    id: 'gov-energy',
+    nameAr: 'وزارة الطاقة',
+    nameEn: 'Ministry of Energy',
+    group: 'government',
+  },
+  {
+    id: 'gov-culture',
+    nameAr: 'وزارة الثقافة',
+    nameEn: 'Ministry of Culture',
+    logo: ministryCultureLogo,
+    group: 'government',
+  },
+  {
+    id: 'gov-interior',
+    nameAr: 'وزارة الداخلية',
+    nameEn: 'Ministry of Interior',
+    group: 'government',
+  },
+  {
+    id: 'gov-education',
+    nameAr: 'وزارة التربية',
+    nameEn: 'Ministry of Education',
+    group: 'government',
+  },
+  {
+    id: 'gov-petroleum',
+    nameAr: 'السورية للبترول',
+    nameEn: 'Syrian Petroleum Company',
+    logo: syrianPetroleumLogo,
+    group: 'government',
+  },
+  {
+    id: 'private-hasseb',
+    nameAr: 'حسيب',
+    nameEn: 'Hasseb',
+    group: 'private',
+  },
+  {
+    id: 'private-badia-cement',
+    nameAr: 'اسمنت البادية',
+    nameEn: 'Al-Badia Cement',
+    group: 'private',
+  },
+  {
+    id: 'private-unicef',
+    nameAr: 'اليونيسف',
+    nameEn: 'UNICEF',
+    logo: unicefLogo,
+    group: 'private',
+  },
+  {
+    id: 'private-fao',
+    nameAr: 'منظمة الأغذية العالمية',
+    nameEn: 'World Food Programme',
+    logo: faoLogo,
+    group: 'private',
+  },
+  {
+    id: 'private-who',
+    nameAr: 'منظمة الصحة العالمية',
+    nameEn: 'World Health Organization',
+    logo: whoLogo,
+    group: 'private',
+  },
+  {
+    id: 'private-golden-gate',
+    nameAr: 'البوابة الذهبية – GOLDEN GATE',
+    nameEn: 'Golden Gate',
+    group: 'private',
+  },
+  {
+    id: 'private-syriatel',
+    nameAr: 'سيريتيل',
+    nameEn: 'Syriatel',
+    logo: syriatelLogo,
+    group: 'private',
+  },
+  {
+    id: 'private-mtn',
+    nameAr: 'إم تي إن',
+    nameEn: 'MTN',
+    group: 'private',
+  },
+  {
+    id: 'private-cham-bank',
+    nameAr: 'بنك الشام',
+    nameEn: 'Cham Bank',
+    logo: chamBankLogo,
+    group: 'private',
+  },
+  {
+    id: 'private-cham-city',
+    nameAr: 'شام سيتي سنتر',
+    nameEn: 'Cham City Center',
+    group: 'private',
+  },
+  {
+    id: 'private-children-hospital',
+    nameAr: 'مستشفى الأطفال بدمشق',
+    nameEn: "Children's Hospital in Damascus",
+    group: 'private',
+  },
+  {
+    id: 'private-joud',
+    nameAr: 'شركة جود',
+    nameEn: 'Joud Company',
+    group: 'private',
+  },
+  {
+    id: 'private-nestle',
+    nameAr: 'شركة نسلة',
+    nameEn: 'Nestlé',
+    group: 'private',
+  },
+  {
+    id: 'private-sugar',
+    nameAr: 'معمل الشرق الأوسط للسكر',
+    nameEn: 'Middle East Sugar Factory',
+    group: 'private',
+  },
+  {
+    id: 'private-zain-marble',
+    nameAr: 'شركة زين للرخام والجرانيت',
+    nameEn: 'Zain Marble and Granite',
+    group: 'private',
+  },
+  {
+    id: 'private-miamed',
+    nameAr: 'معمل MIAMED للصناعات الدوائية',
+    nameEn: 'MIAMED Pharmaceuticals',
+    group: 'private',
   },
 ];
+
+export const featuredClients = clients.filter((client) => client.group === 'featured');
+export const governmentClients = clients.filter((client) => client.group === 'government');
+export const privateClients = clients.filter((client) => client.group === 'private');

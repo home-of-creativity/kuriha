@@ -67,6 +67,8 @@ export interface Translations {
   clients: {
     title: string;
     subtitle: string;
+    governmentTitle: string;
+    privateTitle: string;
   };
   contact: {
     titleLine1: string;
@@ -185,6 +187,8 @@ export const translations: Record<Locale, Translations> = {
     clients: {
       title: 'جهات وثقت بنا',
       subtitle: 'عملاؤنا',
+      governmentTitle: 'القطاع الحكومي',
+      privateTitle: 'القطاع الخاص',
     },
     contact: {
       titleLine1: 'لنصمم منظومة الحماية',
@@ -302,6 +306,8 @@ export const translations: Record<Locale, Translations> = {
     clients: {
       title: 'Trusted By',
       subtitle: 'OUR CLIENTS',
+      governmentTitle: 'Government Sector',
+      privateTitle: 'Private Sector',
     },
     contact: {
       titleLine1: 'Let Us Design the Protection',

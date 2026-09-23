@@ -23,18 +23,36 @@
   max-width: 20ch;
 }
 
+.groupTitle {
+  margin-block-start: clamp(2rem, 5vw, 3rem);
+  margin-block-end: 1rem;
+  font-size: var(--small-ui);
+  font-weight: 700;
+  color: var(--color-red-dark);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
-.item {
+.featuredGrid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.circleGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item,
+.circleItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 96px;
-  padding: 1.15rem 1rem;
   background: var(--color-white);
   border: 1px solid rgba(26, 24, 23, 0.08);
   text-align: center;
@@ -43,9 +61,29 @@
     transform 0.4s ease;
 }
 
+.item {
+  min-height: 96px;
+  padding: 1.15rem 1rem;
+}
+
+.circleItem {
+  width: 7.5rem;
+  height: 7.5rem;
+  padding: 0.85rem;
+  border-radius: 50%;
+}
+
 .logo {
   max-width: 148px;
   max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.circleLogo {
+  max-width: 72px;
+  max-height: 72px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -58,8 +96,13 @@
   line-height: 1.35;
 }
 
+.circleItem .name {
+  font-size: 0.7rem;
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .item:hover {
+  .item:hover,
+  .circleItem:hover {
     border-color: var(--color-red);
     transform: translateY(-2px);
   }
@@ -69,11 +112,24 @@
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .featuredGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .featuredGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .circleItem {
+    width: 8.25rem;
+    height: 8.25rem;
   }
 }
 
@@ -82,13 +138,19 @@
     padding-block: 3.25rem 2.75rem;
   }
 
-  .grid {
+  .grid,
+  .featuredGrid {
     gap: 0.75rem;
   }
 
   .item {
     min-height: 84px;
     padding: 0.9rem 0.7rem;
+  }
+
+  .circleItem {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 
   .logo {
@@ -98,7 +160,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .item:hover {
+  .item:hover,
+  .circleItem:hover {
     transform: none;
   }
 }
