@@ -249,7 +249,7 @@ export const translations: Record<Locale, Translations> = {
     },
     trust: {
       items: [
-        'Established 1960',
+        'SINCE 1960',
         'Integrated engineering solutions',
         '24/7 support & monitoring',
         'NFPA · UL · FM',
