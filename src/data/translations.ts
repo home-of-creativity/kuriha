@@ -18,7 +18,6 @@ export interface Translations {
   };
   hero: {
     eyebrow: string;
-    since: string;
     titleLine1: string;
     titleLine2: string;
     description: string;
@@ -127,7 +126,6 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       eyebrow: 'حلول هندسية لمكافحة الحرائق',
-      since: 'منذ عام 1960',
       titleLine1: 'حلول هندسية متكاملة',
       titleLine2: 'لحماية الأرواح والمنشآت',
       description:
@@ -250,7 +248,6 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       eyebrow: 'ENGINEERING FIRE PROTECTION',
-      since: 'SINCE 1960',
       titleLine1: 'Comprehensive Engineering Solutions',
       titleLine2: 'for Life & Facility Protection',
       description:

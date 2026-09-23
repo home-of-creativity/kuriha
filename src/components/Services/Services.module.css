@@ -63,6 +63,7 @@
 }
 
 .headerMedia {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(26, 24, 23, 0.08);
   background: var(--color-cream-soft);
@@ -174,5 +175,32 @@
 
   .sectionTitle {
     max-width: none;
+  }
+
+  .headerMedia {
+    isolation: isolate;
+    border: 0;
+    background: var(--color-cream);
+  }
+
+  .headerMedia::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 0;
+    z-index: 1;
+    pointer-events: none;
+    height: 22%;
+    background: linear-gradient(
+      to bottom,
+      var(--color-cream) 0%,
+      color-mix(in srgb, var(--color-cream) 55%, transparent) 42%,
+      transparent 100%
+    );
+  }
+
+  .headerMedia img {
+    position: relative;
+    z-index: 0;
   }
 }

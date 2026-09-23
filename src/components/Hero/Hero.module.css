@@ -54,29 +54,9 @@
   padding-inline: clamp(1rem, 3vw, 2rem);
 }
 
-.logoLockup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.7rem;
-}
-
 .heroLogo {
   opacity: 0.96;
   filter: drop-shadow(0 16px 48px rgba(0, 0, 0, 0.55));
-}
-
-.since {
-  margin: 0;
-  font-size: var(--small-ui);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--color-red);
-  text-transform: uppercase;
-}
-
-html[dir='rtl'] .since {
-  letter-spacing: 0.06em;
 }
 
 .eyebrow {
