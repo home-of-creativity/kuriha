@@ -27,6 +27,16 @@ export function OrganizationSchema() {
             'Industrial safety engineering',
           ],
     areaServed: 'SY',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 33.5029602,
+      longitude: 36.2906145,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Damascus',
+      addressCountry: 'SY',
+    },
   };
 
   return (

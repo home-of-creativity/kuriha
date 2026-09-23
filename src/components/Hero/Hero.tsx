@@ -115,7 +115,10 @@ export function Hero() {
           </div>
 
           <div data-hero-logo className={styles.logoCol}>
-            <Logo variant="hero" className={styles.heroLogo} />
+            <div className={styles.logoLockup}>
+              <Logo variant="hero" className={styles.heroLogo} />
+              <p className={styles.since}>{t.hero.since}</p>
+            </div>
           </div>
         </div>
       </Container>

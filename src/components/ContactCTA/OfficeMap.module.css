@@ -1,0 +1,21 @@
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-black-soft);
+  border: 1px solid var(--border-light);
+  min-height: min(18rem, 70vw);
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: min(22rem, 72vw);
+  border: 0;
+  background: var(--color-black-soft);
+}
+
+@media (min-width: 768px) {
+  .canvas {
+    height: min(28rem, 46vw);
+  }
+}

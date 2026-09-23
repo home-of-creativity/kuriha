@@ -11,32 +11,38 @@
 
 .media {
   position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.mapMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.address {
+  margin: 0;
+  color: var(--color-gray);
+  font-size: var(--small-ui);
+}
+
+.mapLink {
+  padding-inline: 0;
+}
+
+.mapFallback {
+  display: grid;
+  place-items: center;
+  min-height: min(18rem, 70vw);
+  border: 1px solid var(--border-light);
   background: var(--color-black-soft);
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.mediaOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to inline-end,
-    rgba(26, 24, 23, 0.2),
-    rgba(26, 24, 23, 0.85)
-  );
-}
-
-html[dir='ltr'] .mediaOverlay {
-  background: linear-gradient(to right, rgba(26, 24, 23, 0.2), rgba(26, 24, 23, 0.85));
-}
-
-html[dir='rtl'] .mediaOverlay {
-  background: linear-gradient(to left, rgba(26, 24, 23, 0.2), rgba(26, 24, 23, 0.85));
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .content {
@@ -76,10 +82,6 @@ html[dir='rtl'] .mediaOverlay {
 
   .grid {
     gap: 1.75rem;
-  }
-
-  .mediaOverlay {
-    display: none;
   }
 
   .title {

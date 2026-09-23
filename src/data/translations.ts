@@ -18,6 +18,7 @@ export interface Translations {
   };
   hero: {
     eyebrow: string;
+    since: string;
     titleLine1: string;
     titleLine2: string;
     description: string;
@@ -75,6 +76,9 @@ export interface Translations {
     titleLine2: string;
     body: string;
     imageAlt: string;
+    mapTitle: string;
+    address: string;
+    openMaps: string;
     form: {
       name: string;
       namePlaceholder: string;
@@ -122,7 +126,8 @@ export const translations: Record<Locale, Translations> = {
       menuClose: 'إغلاق القائمة',
     },
     hero: {
-      eyebrow: 'منذ عام 1960',
+      eyebrow: 'حلول هندسية لمكافحة الحرائق',
+      since: 'منذ عام 1960',
       titleLine1: 'حلول هندسية متكاملة',
       titleLine2: 'لحماية الأرواح والمنشآت',
       description:
@@ -195,6 +200,9 @@ export const translations: Record<Locale, Translations> = {
       titleLine2: 'المناسبة لمنشأتك',
       body: 'تواصل معنا لدراسة المخاطر، تحديد الحل المناسب، ووضع تصور هندسي متكامل لنظام الحماية.',
       imageAlt: 'هاتف طوارئ أحمر',
+      mapTitle: 'مكتب مجموعة قريعة التجارية',
+      address: 'مجموعة قريعة التجارية، دمشق',
+      openMaps: 'افتح في خرائط Google',
       form: {
         name: 'الاسم الكامل',
         namePlaceholder: 'أدخل اسمك',
@@ -241,7 +249,8 @@ export const translations: Record<Locale, Translations> = {
       menuClose: 'Close menu',
     },
     hero: {
-      eyebrow: 'ENGINEERING FIRE PROTECTION SINCE 1960',
+      eyebrow: 'ENGINEERING FIRE PROTECTION',
+      since: 'SINCE 1960',
       titleLine1: 'Comprehensive Engineering Solutions',
       titleLine2: 'for Life & Facility Protection',
       description:
@@ -253,7 +262,7 @@ export const translations: Record<Locale, Translations> = {
     },
     trust: {
       items: [
-        'SINCE 1960',
+        'Established 1960',
         'Integrated engineering solutions',
         '24/7 support & monitoring',
         'NFPA · UL · FM',
@@ -314,6 +323,9 @@ export const translations: Record<Locale, Translations> = {
       titleLine2: 'System for Your Facility',
       body: 'Contact us for risk assessment, solution selection, and a comprehensive engineering vision for your protection system.',
       imageAlt: 'Red emergency telephone',
+      mapTitle: 'Kuriha Group office',
+      address: 'Kuriha Group, Damascus',
+      openMaps: 'Open in Google Maps',
       form: {
         name: 'Full Name',
         namePlaceholder: 'Enter your name',
