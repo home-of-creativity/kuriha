@@ -1,0 +1,118 @@
+.logo {
+  width: min(460px, 100%);
+  height: auto;
+  color: var(--color-cream);
+  filter: drop-shadow(0 16px 48px rgba(0, 0, 0, 0.55));
+}
+
+.logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.logo :global(.st0) {
+  fill: currentColor;
+}
+
+.logo :global(.since),
+.logo :global(.since) path {
+  fill: var(--color-white);
+}
+
+.logo :global(.st1),
+.logo :global(.st2) {
+  fill: var(--color-red);
+}
+
+.logo :global(.flame) {
+  transform-box: fill-box;
+}
+
+.logo :global(.tongue) {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.logo :global(.tongueOuter) {
+  fill: var(--color-red);
+  animation: flameBody 2.2s ease-in-out infinite;
+}
+
+.logo :global(.tongueCore) {
+  fill: var(--color-cream);
+  animation: flameLick 0.85s ease-in-out infinite;
+}
+
+.logo :global(.wisp) {
+  fill: var(--color-cream);
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  opacity: 0;
+}
+
+.logo :global(.wispA) {
+  animation: flameRise 1.6s ease-out infinite;
+}
+
+.logo :global(.wispB) {
+  animation: flameRise 1.35s ease-out 0.55s infinite;
+}
+
+@keyframes flameBody {
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(1) rotate(0deg);
+  }
+  45% {
+    transform: scaleX(0.97) scaleY(1.04) rotate(-1.5deg);
+  }
+  75% {
+    transform: scaleX(1.03) scaleY(0.98) rotate(1.5deg);
+  }
+}
+
+@keyframes flameLick {
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(0.92) rotate(2deg);
+  }
+  35% {
+    transform: scaleX(0.78) scaleY(1.22) rotate(-4deg);
+  }
+  68% {
+    transform: scaleX(1.08) scaleY(1.05) rotate(3deg);
+  }
+}
+
+@keyframes flameRise {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.7);
+  }
+  25% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.35);
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: min(280px, 78vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo :global(.tongue),
+  .logo :global(.wisp) {
+    animation: none;
+  }
+
+  .logo :global(.wisp) {
+    opacity: 0;
+  }
+}

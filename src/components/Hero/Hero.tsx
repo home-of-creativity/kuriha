@@ -6,7 +6,7 @@ import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { isCompactViewport, setVisibleState } from '@/lib/motion';
 import { Container } from '@/components/ui/Container/Container';
 import { Button } from '@/components/ui/Button/Button';
-import { Logo } from '@/components/ui/Logo/Logo';
+import { HeroLogo } from '@/components/ui/Logo/HeroLogo';
 import styles from './Hero.module.css';
 
 export function Hero() {
@@ -115,7 +115,7 @@ export function Hero() {
           </div>
 
           <div data-hero-logo className={styles.logoCol}>
-            <Logo variant="hero" className={styles.heroLogo} />
+            <HeroLogo className={styles.heroLogo} />
           </div>
         </div>
       </Container>
