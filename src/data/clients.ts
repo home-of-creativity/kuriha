@@ -1,10 +1,30 @@
-import chamBankLogo from '@clients/cham-bank.webp';
-import syrianPetroleumLogo from '@clients/syrian-petroleum.svg';
-import syriatelLogo from '@clients/syriatel.svg';
-import faoLogo from '@clients/fao.svg';
-import whoLogo from '@clients/who.svg';
-import unicefLogo from '@clients/unicef.svg';
-import ministryCultureLogo from '@clients/ministry-culture.svg';
+import featuredCultureLogo from '@clients/trust_us/ministry-culture.svg';
+import featuredBadiaLogo from '@clients/trust_us/Al-Badia_cement.svg';
+import featuredEmergencyLogo from '@clients/trust_us/Ministry_of_Emergency_and_Disasters.png';
+import featuredGoldenLogo from '@clients/private/golden-get.png';
+
+import govCustomsLogo from '@clients/public/General_Authority_for_Customs_Ports.png';
+import govCultureLogo from '@clients/public/ministry-culture.svg';
+import govEducationLogo from '@clients/public/Ministry_of_Education.png';
+import govEnergyLogo from '@clients/public/Ministry_of_energy.png';
+import govInteriorLogo from '@clients/public/Ministry_of_Interior.png';
+import govPetroleumLogo from '@clients/public/syria_petroleum.png';
+
+import privateHaseebLogo from '@clients/private/haseeb.png';
+import privateBadiaLogo from '@clients/private/Al-Badia_cement.svg';
+import privateUnicefLogo from '@clients/private/unicef.png';
+import privateFaoLogo from '@clients/private/fao.png';
+import privateWhoLogo from '@clients/private/who.svg';
+import privateGoldenLogo from '@clients/private/golden-get.png';
+import privateSyriatelLogo from '@clients/private/syriatel.png';
+import privateMtnLogo from '@clients/private/mtn.png';
+import privateChamBankLogo from '@clients/private/cham_bank.png';
+import privateChamCityLogo from '@clients/private/cham_city_center.png';
+import privateKidsHospitalLogo from '@clients/private/kids_hospital.png';
+import privateJoudLogo from '@clients/private/joud.png';
+import privateNestleLogo from '@clients/private/nestle.png';
+import privateZainLogo from '@clients/private/zain.png';
+import privateMiamedLogo from '@clients/private/MIAMED.png';
 
 export type ClientGroup = 'featured' | 'government' | 'private';
 
@@ -21,19 +41,21 @@ export const clients: ClientItem[] = [
     id: 'featured-ministry-culture',
     nameAr: 'وزارة الثقافة',
     nameEn: 'Ministry of Culture',
-    logo: ministryCultureLogo,
+    logo: featuredCultureLogo,
     group: 'featured',
   },
   {
     id: 'featured-badia-cement',
     nameAr: 'اسمنت البادية',
     nameEn: 'Al-Badia Cement',
+    logo: featuredBadiaLogo,
     group: 'featured',
   },
   {
     id: 'featured-golden-gate',
     nameAr: 'البوابة الذهبية – GOLDEN GATE',
     nameEn: 'Golden Gate',
+    logo: featuredGoldenLogo,
     group: 'featured',
   },
   {
@@ -52,12 +74,14 @@ export const clients: ClientItem[] = [
     id: 'featured-emergency',
     nameAr: 'وزارة الطوارئ وإدارة الكوارث',
     nameEn: 'Ministry of Emergency and Disaster Management',
+    logo: featuredEmergencyLogo,
     group: 'featured',
   },
   {
     id: 'gov-ports-customs',
     nameAr: 'الهيئة العامة للمنافذ والجمارك',
     nameEn: 'General Authority for Ports and Customs',
+    logo: govCustomsLogo,
     group: 'government',
   },
   {
@@ -70,115 +94,126 @@ export const clients: ClientItem[] = [
     id: 'gov-energy',
     nameAr: 'وزارة الطاقة',
     nameEn: 'Ministry of Energy',
+    logo: govEnergyLogo,
     group: 'government',
   },
   {
     id: 'gov-culture',
     nameAr: 'وزارة الثقافة',
     nameEn: 'Ministry of Culture',
-    logo: ministryCultureLogo,
+    logo: govCultureLogo,
     group: 'government',
   },
   {
     id: 'gov-interior',
     nameAr: 'وزارة الداخلية',
     nameEn: 'Ministry of Interior',
+    logo: govInteriorLogo,
     group: 'government',
   },
   {
     id: 'gov-education',
     nameAr: 'وزارة التربية',
     nameEn: 'Ministry of Education',
+    logo: govEducationLogo,
     group: 'government',
   },
   {
     id: 'gov-petroleum',
     nameAr: 'السورية للبترول',
     nameEn: 'Syrian Petroleum Company',
-    logo: syrianPetroleumLogo,
+    logo: govPetroleumLogo,
     group: 'government',
   },
   {
     id: 'private-hasseb',
     nameAr: 'حسيب',
     nameEn: 'Hasseb',
+    logo: privateHaseebLogo,
     group: 'private',
   },
   {
     id: 'private-badia-cement',
     nameAr: 'اسمنت البادية',
     nameEn: 'Al-Badia Cement',
+    logo: privateBadiaLogo,
     group: 'private',
   },
   {
     id: 'private-unicef',
     nameAr: 'اليونيسف',
     nameEn: 'UNICEF',
-    logo: unicefLogo,
+    logo: privateUnicefLogo,
     group: 'private',
   },
   {
     id: 'private-fao',
     nameAr: 'منظمة الأغذية العالمية',
     nameEn: 'World Food Programme',
-    logo: faoLogo,
+    logo: privateFaoLogo,
     group: 'private',
   },
   {
     id: 'private-who',
     nameAr: 'منظمة الصحة العالمية',
     nameEn: 'World Health Organization',
-    logo: whoLogo,
+    logo: privateWhoLogo,
     group: 'private',
   },
   {
     id: 'private-golden-gate',
     nameAr: 'البوابة الذهبية – GOLDEN GATE',
     nameEn: 'Golden Gate',
+    logo: privateGoldenLogo,
     group: 'private',
   },
   {
     id: 'private-syriatel',
     nameAr: 'سيريتيل',
     nameEn: 'Syriatel',
-    logo: syriatelLogo,
+    logo: privateSyriatelLogo,
     group: 'private',
   },
   {
     id: 'private-mtn',
     nameAr: 'إم تي إن',
     nameEn: 'MTN',
+    logo: privateMtnLogo,
     group: 'private',
   },
   {
     id: 'private-cham-bank',
     nameAr: 'بنك الشام',
     nameEn: 'Cham Bank',
-    logo: chamBankLogo,
+    logo: privateChamBankLogo,
     group: 'private',
   },
   {
     id: 'private-cham-city',
     nameAr: 'شام سيتي سنتر',
     nameEn: 'Cham City Center',
+    logo: privateChamCityLogo,
     group: 'private',
   },
   {
     id: 'private-children-hospital',
     nameAr: 'مستشفى الأطفال بدمشق',
     nameEn: "Children's Hospital in Damascus",
+    logo: privateKidsHospitalLogo,
     group: 'private',
   },
   {
     id: 'private-joud',
     nameAr: 'شركة جود',
     nameEn: 'Joud Company',
+    logo: privateJoudLogo,
     group: 'private',
   },
   {
     id: 'private-nestle',
     nameAr: 'شركة نسلة',
     nameEn: 'Nestlé',
+    logo: privateNestleLogo,
     group: 'private',
   },
   {
@@ -191,12 +226,14 @@ export const clients: ClientItem[] = [
     id: 'private-zain-marble',
     nameAr: 'شركة زين للرخام والجرانيت',
     nameEn: 'Zain Marble and Granite',
+    logo: privateZainLogo,
     group: 'private',
   },
   {
     id: 'private-miamed',
     nameAr: 'معمل MIAMED للصناعات الدوائية',
     nameEn: 'MIAMED Pharmaceuticals',
+    logo: privateMiamedLogo,
     group: 'private',
   },
 ];
