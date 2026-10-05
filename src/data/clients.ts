@@ -1,7 +1,7 @@
 import featuredCultureLogo from '@clients/trust_us/ministry-culture.svg';
 import featuredBadiaLogo from '@clients/trust_us/Al-Badia_cement.svg';
 import featuredEmergencyLogo from '@clients/trust_us/Ministry_of_Emergency_and_Disasters.png';
-import featuredGoldenLogo from '@clients/private/golden-get.png';
+import featuredGoldenLogo from '@clients/trust_us/golden.svg';
 
 import govCustomsLogo from '@clients/public/General_Authority_for_Customs_Ports.png';
 import govCultureLogo from '@clients/public/ministry-culture.svg';
@@ -9,21 +9,22 @@ import govEducationLogo from '@clients/public/Ministry_of_Education.png';
 import govEnergyLogo from '@clients/public/Ministry_of_energy.png';
 import govInteriorLogo from '@clients/public/Ministry_of_Interior.png';
 import govPetroleumLogo from '@clients/public/syria_petroleum.png';
+import govPortsLogo from '@clients/public/ports.svg';
 
 import privateHaseebLogo from '@clients/private/haseeb.png';
 import privateBadiaLogo from '@clients/private/Al-Badia_cement.svg';
 import privateUnicefLogo from '@clients/private/unicef.png';
 import privateFaoLogo from '@clients/private/fao.png';
 import privateWhoLogo from '@clients/private/who.svg';
-import privateGoldenLogo from '@clients/private/golden-get.png';
+import privateGoldenLogo from '@clients/private/golden.svg';
 import privateSyriatelLogo from '@clients/private/syriatel.png';
 import privateMtnLogo from '@clients/private/mtn.png';
 import privateChamBankLogo from '@clients/private/cham_bank.png';
 import privateChamCityLogo from '@clients/private/cham_city_center.png';
 import privateKidsHospitalLogo from '@clients/private/kids_hospital.png';
-import privateJoudLogo from '@clients/private/joud.png';
+import privateJoudLogo from '@clients/private/joud.svg';
 import privateNestleLogo from '@clients/private/nestle.png';
-import privateZainLogo from '@clients/private/zain.png';
+import privateZainLogo from '@clients/private/zain-marble.svg';
 import privateMiamedLogo from '@clients/private/MIAMED.png';
 
 export type ClientGroup = 'featured' | 'government' | 'private';
@@ -62,12 +63,7 @@ export const clients: ClientItem[] = [
     id: 'featured-land-sea-ports',
     nameAr: 'الهيئة العامة للمنافذ البرية والبحرية',
     nameEn: 'General Authority for Land and Sea Ports',
-    group: 'featured',
-  },
-  {
-    id: 'featured-golden-1',
-    nameAr: 'GOLDEN 1',
-    nameEn: 'GOLDEN 1',
+    logo: govCustomsLogo,
     group: 'featured',
   },
   {
@@ -88,6 +84,7 @@ export const clients: ClientItem[] = [
     id: 'gov-ports',
     nameAr: 'المؤسسة العامة للموانئ',
     nameEn: 'General Establishment of Ports',
+    logo: govPortsLogo,
     group: 'government',
   },
   {
@@ -214,12 +211,6 @@ export const clients: ClientItem[] = [
     nameAr: 'شركة نسلة',
     nameEn: 'Nestlé',
     logo: privateNestleLogo,
-    group: 'private',
-  },
-  {
-    id: 'private-sugar',
-    nameAr: 'معمل الشرق الأوسط للسكر',
-    nameEn: 'Middle East Sugar Factory',
     group: 'private',
   },
   {

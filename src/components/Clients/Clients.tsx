@@ -22,8 +22,8 @@ function ClientCard({ client, locale, variant }: { client: ClientItem; locale: s
           src={client.logo}
           alt={name}
           className={variant === 'circle' ? styles.circleLogo : styles.logo}
-          width={variant === 'circle' ? 88 : 160}
-          height={variant === 'circle' ? 88 : 56}
+          width={variant === 'circle' ? 132 : 220}
+          height={variant === 'circle' ? 132 : 108}
           loading="lazy"
           decoding="async"
         />
