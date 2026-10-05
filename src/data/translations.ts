@@ -37,6 +37,12 @@ export interface Translations {
     body2: string;
     imageAlt: string;
   };
+  certificate: {
+    label: string;
+    title: string;
+    body: string;
+    imageAlt: string;
+  };
   stats: {
     items: { value: string; label: string; numeric?: number; suffix?: string }[];
   };
@@ -152,6 +158,12 @@ export const translations: Record<Locale, Translations> = {
       body2:
         'وعلى مدار أكثر من ستة عقود من الخبرة الميدانية، ساهمت الشركة في حماية المنشآت الحيوية والصناعية والتجارية من خلال حلول هندسية متقدمة.',
       imageAlt: 'مهندس حماية من الحرائق',
+    },
+    certificate: {
+      label: 'ترخيص رسمي',
+      title: 'شهادة تسجيل شركة',
+      body: 'مسجّلة رسمياً لدى وزارة الاقتصاد والتجارة — مديرية التجارة الداخلية وحماية المستهلك في محافظة اللاذقية.',
+      imageAlt: 'شهادة تسجيل شركة الشرق الأوسط للحلول المتكاملة المحدودة المسؤولية',
     },
     stats: {
       items: [
@@ -274,6 +286,12 @@ export const translations: Record<Locale, Translations> = {
       body2:
         'Over more than six decades of field experience, the company has contributed to protecting vital, industrial and commercial facilities through advanced engineering solutions.',
       imageAlt: 'Fire protection engineer',
+    },
+    certificate: {
+      label: 'Official registration',
+      title: 'Company Registration Certificate',
+      body: 'Officially registered with the Ministry of Economy and Trade — Directorate of Internal Trade and Consumer Protection in Lattakia Governorate.',
+      imageAlt: 'Company registration certificate for Middle East Integrated Solutions LLC',
     },
     stats: {
       items: [

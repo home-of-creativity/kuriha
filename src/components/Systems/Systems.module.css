@@ -1,5 +1,6 @@
 .systems {
-  background: var(--color-black);
+  background: var(--color-cream);
+  color: var(--color-black);
   padding-block: clamp(4rem, 10vw, 8rem);
 }
 
@@ -16,7 +17,7 @@
   position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: var(--color-black-soft);
+  background: var(--color-white);
   border: 1px solid var(--border-light);
 }
 
@@ -48,7 +49,7 @@
   margin-block-end: 1.15rem;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: var(--color-black-soft);
+  background: var(--color-white);
   border: 1px solid var(--border-light);
 }
 
@@ -76,7 +77,7 @@
 .topics li {
   position: relative;
   padding-inline-start: 1rem;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   font-size: var(--body-size);
 }
 
@@ -114,7 +115,7 @@
     position: sticky;
     top: calc(var(--header-height-scrolled) + 1.5rem);
     z-index: 2;
-    background: var(--color-black);
+    background: var(--color-cream);
   }
 
   .mediaStack {
@@ -132,7 +133,7 @@
 
   .panel {
     padding-block: 1.5rem;
-    border-block-start: 1px solid var(--border-light);
+    border-block-start: 1px solid rgba(26, 24, 23, 0.1);
   }
 
   .panelActive .panelTitle {

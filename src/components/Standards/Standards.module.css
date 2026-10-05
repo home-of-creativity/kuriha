@@ -1,5 +1,6 @@
 .standards {
-  background: var(--color-black-soft);
+  background: var(--color-cream-soft);
+  color: var(--color-black);
   padding-block: clamp(3rem, 8vw, 5rem);
   border-block: 1px solid var(--border-light);
 }
@@ -16,7 +17,7 @@
   gap: 0.25rem;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 600;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   max-width: 24ch;
 }
 
@@ -29,7 +30,7 @@
 .label {
   font-size: clamp(1.85rem, 4.5vw, 3.25rem);
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-black);
   opacity: 0.85;
   letter-spacing: -0.02em;
 }

@@ -83,8 +83,8 @@ export function VisionMission() {
                 src={visionImage}
                 alt={t.visionMission.visionImageAlt}
                 loading="lazy"
-                width={960}
-                height={720}
+                width={1600}
+                height={1200}
               />
             </div>
             <h3 className={styles.cardTitle}>{t.visionMission.visionTitle}</h3>
@@ -96,8 +96,8 @@ export function VisionMission() {
                 src={missionImage}
                 alt={t.visionMission.missionImageAlt}
                 loading="lazy"
-                width={960}
-                height={720}
+                width={1600}
+                height={1200}
               />
             </div>
             <h3 className={styles.cardTitle}>{t.visionMission.missionTitle}</h3>

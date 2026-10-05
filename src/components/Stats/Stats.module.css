@@ -1,5 +1,6 @@
 .stats {
-  background: var(--color-black);
+  background: var(--color-cream-soft);
+  color: var(--color-black);
   padding-block: clamp(3rem, 8vw, 5rem);
   border-block: 1px solid var(--border-light);
 }
@@ -21,13 +22,13 @@
   margin-block-end: 0.5rem;
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-black);
   line-height: 1;
 }
 
 .label {
   font-size: var(--small-ui);
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
 }
 
 @media (min-width: 768px) {

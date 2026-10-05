@@ -1,5 +1,6 @@
 .footer {
-  background: #11100f;
+  background: var(--color-cream-soft);
+  color: var(--color-black);
   border-block-start: 2px solid var(--color-red);
   padding-block: clamp(3rem, 8vw, 4.5rem) 2rem;
 }
@@ -19,7 +20,7 @@
 
 .statement {
   font-size: var(--small-ui);
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   line-height: 1.6;
 }
 
@@ -32,12 +33,12 @@
 .nav a {
   font-size: var(--small-ui);
   font-weight: 500;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   transition: color var(--transition-base);
 }
 
 .nav a:hover {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .bottom {

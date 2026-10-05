@@ -1,5 +1,5 @@
 .contact {
-  background: var(--color-black);
+  background: var(--color-cream);
   padding-block: clamp(4rem, 10vw, 7rem);
 }
 
@@ -27,7 +27,7 @@
 
 .address {
   margin: 0;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   font-size: var(--small-ui);
 }
 
@@ -40,8 +40,8 @@
   place-items: center;
   min-height: min(18rem, 70vw);
   border: 1px solid var(--border-light);
-  background: var(--color-black-soft);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-black);
   text-decoration: none;
 }
 
@@ -57,13 +57,13 @@
   font-size: var(--section-title);
   font-weight: 600;
   line-height: var(--title-line-height);
-  color: var(--color-white);
+  color: var(--color-black);
   max-width: 20ch;
 }
 
 .body {
   margin-block-end: 1.75rem;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   font-size: var(--body-size);
   max-width: 48ch;
 }

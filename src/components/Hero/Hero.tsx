@@ -105,7 +105,7 @@ export function Hero() {
                 </Button>
               </span>
               <span data-hero-button>
-                <Button href="#contact" variant="secondary">
+                <Button href="#contact" variant="secondary" className={styles.secondaryCta}>
                   {t.hero.secondaryCta}
                 </Button>
               </span>

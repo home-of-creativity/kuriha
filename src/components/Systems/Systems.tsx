@@ -64,7 +64,7 @@ export function Systems() {
     <section ref={sectionRef} id="systems" className={styles.systems}>
       <Container>
         <SectionHeading
-          theme="dark"
+          theme="light"
           label={t.systems.label}
           line1={t.systems.titleLine1}
           line2={t.systems.titleLine2}
