@@ -65,8 +65,8 @@ export function Hero() {
           src={heroImage}
           alt={t.hero.imageAlt}
           className={styles.image}
-          width={1920}
-          height={1080}
+          width={1448}
+          height={1086}
           fetchPriority="high"
         />
         <div className={styles.overlay} aria-hidden="true" />

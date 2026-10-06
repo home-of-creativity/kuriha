@@ -3,14 +3,13 @@
   padding-block: clamp(4rem, 10vw, 7rem);
 }
 
-.grid {
-  display: grid;
-  gap: 2.5rem;
-  align-items: center;
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 3rem);
 }
 
-.media {
-  position: relative;
+.mapBlock {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
@@ -46,7 +45,7 @@
 }
 
 .content {
-  max-width: 560px;
+  min-width: 0;
 }
 
 .title {
@@ -68,20 +67,9 @@
   max-width: 48ch;
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3rem;
-  }
-}
-
 @media (max-width: 767px) {
   .contact {
     padding-block: 3.25rem 2.75rem;
-  }
-
-  .grid {
-    gap: 1.75rem;
   }
 
   .title {

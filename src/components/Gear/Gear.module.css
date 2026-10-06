@@ -30,8 +30,17 @@
 }
 
 .image {
+  display: block;
   width: 100%;
-  height: 180px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  background: var(--color-white);
+}
+
+/* Gear images (equipment + PPE) are exact 4:3 (1200x900): fill the frame edge to edge */
+.imageFill {
   object-fit: cover;
 }
 

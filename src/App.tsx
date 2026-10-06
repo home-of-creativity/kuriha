@@ -2,7 +2,6 @@ import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
 import { TrustStrip } from '@/components/TrustStrip/TrustStrip';
 import { About } from '@/components/About/About';
-import { Certificate } from '@/components/Certificate/Certificate';
 import { Stats } from '@/components/Stats/Stats';
 import { VisionMission } from '@/components/VisionMission/VisionMission';
 import { Services } from '@/components/Services/Services';
@@ -23,7 +22,6 @@ export default function App() {
         <Hero />
         <TrustStrip />
         <About />
-        <Certificate />
         <Stats />
         <VisionMission />
         <Services />

@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container/Container';
 import { Logo } from '@/components/ui/Logo/Logo';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher/LanguageSwitcher';
 import { Button } from '@/components/ui/Button/Button';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import styles from './Header.module.css';
 
 const navItems = [
@@ -19,6 +20,8 @@ export function Header() {
   const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 767px)');
+  const logoInk = isMobile || scrolled ? 'black' : 'white';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 64);
@@ -45,7 +48,7 @@ export function Header() {
       <Container as="nav" className={styles.nav} aria-label="Main">
         <div className={styles.inner}>
           <a href="#" className={styles.logoLink} aria-label="KOREIHA GROUP home">
-            <Logo variant={scrolled ? 'small' : 'default'} />
+            <Logo variant={scrolled ? 'small' : 'default'} ink={logoInk} />
           </a>
 
           <ul className={styles.desktopNav}>

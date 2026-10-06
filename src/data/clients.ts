@@ -39,6 +39,13 @@ export interface ClientItem {
 
 export const clients: ClientItem[] = [
   {
+    id: 'featured-emergency',
+    nameAr: 'وزارة الطوارئ وإدارة الكوارث',
+    nameEn: 'Ministry of Emergency and Disaster Management',
+    logo: featuredEmergencyLogo,
+    group: 'featured',
+  },
+  {
     id: 'featured-ministry-culture',
     nameAr: 'وزارة الثقافة',
     nameEn: 'Ministry of Culture',
@@ -64,13 +71,6 @@ export const clients: ClientItem[] = [
     nameAr: 'الهيئة العامة للمنافذ البرية والبحرية',
     nameEn: 'General Authority for Land and Sea Ports',
     logo: govCustomsLogo,
-    group: 'featured',
-  },
-  {
-    id: 'featured-emergency',
-    nameAr: 'وزارة الطوارئ وإدارة الكوارث',
-    nameEn: 'Ministry of Emergency and Disaster Management',
-    logo: featuredEmergencyLogo,
     group: 'featured',
   },
   {

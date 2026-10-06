@@ -16,6 +16,7 @@ export function About() {
   useGSAP(
     () => {
       if (!sectionRef.current) return;
+      const media = sectionRef.current.querySelector('[data-parallax-media]');
       const wrapper = sectionRef.current.querySelector('[data-reveal-wrapper]');
       const image = sectionRef.current.querySelector('[data-reveal-image]');
 
@@ -27,7 +28,9 @@ export function About() {
       }
 
       revealImage(wrapper, image, { trigger: sectionRef.current });
-      subtleParallax(image, sectionRef.current, reducedMotion);
+      // Parallax moves the whole framed image (not the photo inside its clipped frame),
+      // so no part of the photo is ever cut off.
+      if (media) subtleParallax(media, sectionRef.current, reducedMotion);
     },
     { scope: sectionRef, dependencies: [reducedMotion] },
   );
@@ -49,15 +52,16 @@ export function About() {
           </div>
 
           <div className={styles.mediaCol}>
-            <div className={styles.media}>
+            <div data-parallax-media className={styles.media}>
               <div data-reveal-wrapper className={styles.imageWrap}>
                 <img
                   data-reveal-image
                   src={aboutImage}
                   alt={t.about.imageAlt}
-                  width={800}
-                  height={1000}
+                  width={1600}
+                  height={1200}
                   loading="lazy"
+                  decoding="async"
                   className={styles.image}
                 />
               </div>
