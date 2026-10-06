@@ -9,13 +9,13 @@
 .langBtn {
   min-height: 44px;
   min-width: 36px;
-  color: var(--header-fg, var(--color-gray-dark));
+  color: var(--color-gray);
   transition: color var(--transition-base);
 }
 
 .langBtn:hover,
 .langBtn.active {
-  color: var(--header-fg-strong, var(--color-black));
+  color: var(--color-white);
 }
 
 .divider {

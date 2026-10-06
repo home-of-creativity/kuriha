@@ -46,15 +46,14 @@
 
 .imageWrap {
   position: relative;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
 .image {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -81,7 +80,7 @@
   }
 
   .imageWrap {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: auto;
     overflow: hidden;
     isolation: isolate;
     background: var(--color-cream);
@@ -94,10 +93,11 @@
     inset-block-start: 0;
     z-index: 1;
     pointer-events: none;
-    height: 12%;
+    height: 22%;
     background: linear-gradient(
       to bottom,
-      color-mix(in srgb, var(--color-cream) 55%, transparent) 0%,
+      var(--color-cream) 0%,
+      color-mix(in srgb, var(--color-cream) 55%, transparent) 42%,
       transparent 100%
     );
   }
@@ -106,8 +106,8 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     object-position: center;
   }
 }
@@ -128,14 +128,7 @@
   }
 
   .media {
-    /* Small bleed only, so the image never runs past the viewport edge (it would be clipped). */
-    margin-inline-end: -1rem;
-    margin-block-start: 2rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .media {
     margin-inline-end: -3rem;
+    margin-block-start: 2rem;
   }
 }

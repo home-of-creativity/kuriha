@@ -20,7 +20,7 @@ export function Footer() {
       <Container>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Logo ink="black" />
+            <Logo />
             <p className={styles.statement}>{t.footer.statement}</p>
           </div>
 

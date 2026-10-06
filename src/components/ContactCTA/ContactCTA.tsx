@@ -13,17 +13,8 @@ export function ContactCTA() {
   return (
     <section id="contact" className={styles.contact} aria-label="Contact">
       <Container>
-        <div className={styles.layout}>
-          <div className={styles.content}>
-              <h2 className={styles.title}>
-                <span>{t.contact.titleLine1}</span>
-                <span>{t.contact.titleLine2}</span>
-              </h2>
-              <p className={styles.body}>{t.contact.body}</p>
-              <ContactForm />
-            </div>
-
-          <div className={styles.mapBlock}>
+        <div className={styles.grid}>
+          <div className={styles.media}>
             {apiKey ? (
               <OfficeMap apiKey={apiKey} title={t.contact.mapTitle} locale={locale} />
             ) : (
@@ -42,6 +33,15 @@ export function ContactCTA() {
                 {t.contact.openMaps}
               </Button>
             </div>
+          </div>
+
+          <div className={styles.content}>
+            <h2 className={styles.title}>
+              <span>{t.contact.titleLine1}</span>
+              <span>{t.contact.titleLine2}</span>
+            </h2>
+            <p className={styles.body}>{t.contact.body}</p>
+            <ContactForm />
           </div>
         </div>
       </Container>

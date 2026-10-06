@@ -64,18 +64,15 @@
 
 .headerMedia {
   position: relative;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
   border: 1px solid rgba(26, 24, 23, 0.08);
   background: var(--color-cream-soft);
 }
 
 .headerMedia img {
-  display: block;
   width: 100%;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .grid {
@@ -193,10 +190,11 @@
     inset-block-start: 0;
     z-index: 1;
     pointer-events: none;
-    height: 12%;
+    height: 22%;
     background: linear-gradient(
       to bottom,
-      color-mix(in srgb, var(--color-cream) 55%, transparent) 0%,
+      var(--color-cream) 0%,
+      color-mix(in srgb, var(--color-cream) 55%, transparent) 42%,
       transparent 100%
     );
   }

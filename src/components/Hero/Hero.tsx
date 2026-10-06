@@ -65,8 +65,8 @@ export function Hero() {
           src={heroImage}
           alt={t.hero.imageAlt}
           className={styles.image}
-          width={1448}
-          height={1086}
+          width={1920}
+          height={1080}
           fetchPriority="high"
         />
         <div className={styles.overlay} aria-hidden="true" />
@@ -105,7 +105,7 @@ export function Hero() {
                 </Button>
               </span>
               <span data-hero-button>
-                <Button href="#contact" variant="secondary" className={styles.secondaryCta}>
+                <Button href="#contact" variant="secondary">
                   {t.hero.secondaryCta}
                 </Button>
               </span>

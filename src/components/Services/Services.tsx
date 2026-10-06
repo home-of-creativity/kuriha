@@ -30,9 +30,8 @@ export function Services() {
               alt=""
               aria-hidden="true"
               loading="lazy"
-              decoding="async"
-              width={1672}
-              height={941}
+              width={960}
+              height={640}
             />
           </div>
         </header>

@@ -53,7 +53,6 @@ export const systems: SystemItem[] = [
     imageAltAr: 'أسطوانات إطفاء غازات نظيفة لمركز بيانات',
     imageAltEn: 'Data center clean agent suppression cylinders',
     topicsAr: [
-      'الغازات النظيفة : Novec 1230 - Aerosol - IG - N2 - CO2',
       'غازات إطفاء معتمدة دولياً',
       'ثاني أكسيد الكربون والغازات الخاملة',
       'مراكز البيانات وغرف الخوادم',
@@ -61,9 +60,8 @@ export const systems: SystemItem[] = [
       'المعدات الصناعية الحساسة',
     ],
     topicsEn: [
-      'Clean agents: Novec 1230 - Aerosol - IG - N2 - CO2',
-      'Internationally approved extinguishing gases',
-      'Carbon dioxide and inert gases',
+      'FM-200 · NAF S 125 · NAF S 227 · FK-5-1-12',
+      'CO2 · Aerosol · Inert Gas · N2',
       'Data centers and server rooms',
       'Electrical and generator rooms',
       'Sensitive industrial equipment',

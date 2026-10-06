@@ -18,7 +18,7 @@
 .field label {
   font-size: var(--small-ui);
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .field input,
@@ -27,9 +27,9 @@
   padding: 0.85rem 1rem;
   font: inherit;
   font-size: var(--body-size);
-  color: var(--color-black);
-  background: var(--color-white);
-  border: 1px solid rgba(26, 24, 23, 0.16);
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   transition:
     border-color var(--transition-base),
@@ -81,7 +81,7 @@
 .successTitle {
   font-size: var(--secondary-title);
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .successBody {

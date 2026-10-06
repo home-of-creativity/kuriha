@@ -12,17 +12,15 @@ const RED = '#c81e25';
 const INK = '#1a1817';
 
 const MAP_STYLES: unknown[] = [
-  { elementType: 'geometry', stylers: [{ color: '#f6f4ee' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#3d3a36' }] },
-  { elementType: 'labels.text.stroke', stylers: [{ color: '#fdfbed' }] },
+  { elementType: 'geometry', stylers: [{ color: '#242120' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#b7b1a8' }] },
+  { elementType: 'labels.text.stroke', stylers: [{ color: INK }] },
   { featureType: 'administrative', elementType: 'geometry', stylers: [{ visibility: 'off' }] },
   { featureType: 'poi', stylers: [{ visibility: 'off' }] },
-  { featureType: 'poi.park', elementType: 'geometry', stylers: [{ color: '#e7efe4' }] },
-  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#ffffff' }] },
-  { featureType: 'road', elementType: 'geometry.stroke', stylers: [{ color: '#e4e0d4' }] },
+  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#3a3532' }] },
   { featureType: 'road', elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
   { featureType: 'transit', stylers: [{ visibility: 'off' }] },
-  { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#d5e4ef' }] },
+  { featureType: 'water', elementType: 'geometry', stylers: [{ color: INK }] },
 ];
 
 const PIN_SVG = `

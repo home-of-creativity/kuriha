@@ -6,7 +6,6 @@ import { Stats } from '@/components/Stats/Stats';
 import { VisionMission } from '@/components/VisionMission/VisionMission';
 import { Services } from '@/components/Services/Services';
 import { Systems } from '@/components/Systems/Systems';
-import { Gear } from '@/components/Gear/Gear';
 import { Standards } from '@/components/Standards/Standards';
 import { Clients } from '@/components/Clients/Clients';
 import { ContactCTA } from '@/components/ContactCTA/ContactCTA';
@@ -26,7 +25,6 @@ export default function App() {
         <VisionMission />
         <Services />
         <Systems />
-        <Gear />
         <Standards />
         <Clients />
         <ContactCTA />

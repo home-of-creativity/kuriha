@@ -64,7 +64,7 @@ export function Systems() {
     <section ref={sectionRef} id="systems" className={styles.systems}>
       <Container>
         <SectionHeading
-          theme="light"
+          theme="dark"
           label={t.systems.label}
           line1={t.systems.titleLine1}
           line2={t.systems.titleLine2}
@@ -80,10 +80,9 @@ export function Systems() {
                   src={system.image}
                   alt={locale === 'ar' ? system.imageAltAr : system.imageAltEn}
                   className={`${styles.systemImage} ${index === activeIndex ? styles.activeImage : ''}`}
-                  width={1600}
-                  height={1200}
+                  width={800}
+                  height={600}
                   loading={index === 0 ? 'eager' : 'lazy'}
-                  decoding="async"
                 />
               ))}
             </div>
@@ -100,10 +99,9 @@ export function Systems() {
                   <img
                     src={system.image}
                     alt={locale === 'ar' ? system.imageAltAr : system.imageAltEn}
-                    width={1600}
-                    height={1200}
+                    width={800}
+                    height={500}
                     loading={index === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
                   />
                 </div>
                 <h3 className={styles.panelTitle}>

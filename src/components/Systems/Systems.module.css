@@ -1,6 +1,5 @@
 .systems {
-  background: var(--color-cream);
-  color: var(--color-black);
+  background: var(--color-black);
   padding-block: clamp(4rem, 10vw, 8rem);
 }
 
@@ -15,9 +14,9 @@
 
 .mediaStack {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: var(--color-cream);
+  background: var(--color-black-soft);
   border: 1px solid var(--border-light);
 }
 
@@ -26,7 +25,6 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  max-width: none;
   object-fit: cover;
   object-position: center;
   opacity: 0;
@@ -48,14 +46,13 @@
 
 .panelMedia {
   margin-block-end: 1.15rem;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: var(--color-cream);
+  background: var(--color-black-soft);
   border: 1px solid var(--border-light);
 }
 
 .panelMedia img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -79,7 +76,7 @@
 .topics li {
   position: relative;
   padding-inline-start: 1rem;
-  color: var(--color-gray-dark);
+  color: var(--color-gray);
   font-size: var(--body-size);
 }
 
@@ -117,14 +114,11 @@
     position: sticky;
     top: calc(var(--header-height-scrolled) + 1.5rem);
     z-index: 2;
-    background: var(--color-cream);
+    background: var(--color-black);
   }
 
   .mediaStack {
     max-height: calc(100svh - var(--header-height-scrolled) - 3rem);
-    /* Cap width with the height so the frame always stays exactly 4:3 (no side bars, no crop). */
-    max-width: calc((100svh - var(--header-height-scrolled) - 3rem) * 4 / 3);
-    margin-inline: auto;
   }
 
   .panelMedia {
@@ -138,7 +132,7 @@
 
   .panel {
     padding-block: 1.5rem;
-    border-block-start: 1px solid rgba(26, 24, 23, 0.1);
+    border-block-start: 1px solid var(--border-light);
   }
 
   .panelActive .panelTitle {
